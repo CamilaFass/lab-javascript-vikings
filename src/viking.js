@@ -14,7 +14,7 @@ class Soldier {
 }
 
 // Viking
-class Viking extends Solder {
+class Viking extends Soldier {
   constructor(name, health, strength) {
     super(health, strength);
     this.name = name;
@@ -26,8 +26,8 @@ class Viking extends Solder {
   }
   receiveDamage(damage) {
     this.health -= damage;
-    const alive = `${this.name} has received ${damage} points of damage.`;
-    const dead = `${this.name} has died in act of combat.`;
+    const alive = `${this.name} has received ${damage} points of damage`;
+    const dead = `${this.name} has died in act of combat`;
     return this.health > 0 ? alive : dead;
   }
   battleCry() {
@@ -36,11 +36,11 @@ class Viking extends Solder {
 }
 
 // Saxon
-class Saxon extends Solider {
+class Saxon extends Soldier {
   receiveDamage(damage) {
     this.health -= damage;
-    const alive = `A Saxon has received ${damage} points of damage.`;
-    const dead = `A Saxon has died in combat.`;
+    const alive = `A Saxon has received ${damage} points of damage`;
+    const dead = `A Saxon has died in combat`;
     return this.health > 0 ? alive : dead;
   }
 }
